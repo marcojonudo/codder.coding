@@ -1,0 +1,32 @@
+<aside id="leftbar">
+    <div id="title-logo">
+        <div id="me-image-wrapper">
+            <div>
+                <img id="me-image" src="/assets/img/me.png">
+            </div>
+        </div>
+        <span>Codder</span>
+        <span>Codding on the road</span>
+    </div>
+    <ul id="nav-items">
+        <li>
+            <a href="{{ '/' | relative_url }}">
+                <i class="fas fa-home"></i>
+                <span>Página principal</span>
+            </a>
+        </li>
+        {% for item in site.nav_sections %}
+        <li>
+            <a href="{{ item.url | relative_url }}">
+                <i class="fas fa-{{ item.icon }}"></i>
+                <span>{{ item.title }}</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <div id="icons-wrapper">
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-github"></i>
+        <i class="fab fa-stack-overflow"></i>
+    </div>
+</aside>

@@ -1,0 +1,19 @@
+.post-wrapper
+	padding: $medium-gap 0
+	cursor: pointer
+	@include main-item
+
+	&:hover .post
+		transform: translateX(-$small-gap)
+
+	.post
+		transition: transform .2s
+
+		h2
+			font-size: $medium-font
+
+		.meta-data
+			display: flex
+
+			&-item
+				@include meta-data-item

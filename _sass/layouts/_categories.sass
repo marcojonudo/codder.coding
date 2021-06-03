@@ -1,0 +1,37 @@
+.category
+	width: 100%
+	@include main-item
+	padding: $small-gap 0
+
+	&:first-child
+		padding-top: $medium-gap
+
+	&-row
+		display: flex
+		padding: $small-gap 0
+
+		> i:first-child
+			margin-right: $small-gap
+
+	&-parent
+		font-size: $normal-font
+		display: flex
+		font-weight: 400
+
+	&-meta-data
+		@include flex-center
+		font-size: $small-font
+		padding-left: $small-gap
+
+	&-child
+		padding-left: $medium-gap
+
+	i
+		@include flex-center
+
+	a
+		font-size: $normal-font
+
+		&:hover
+			color: red
+

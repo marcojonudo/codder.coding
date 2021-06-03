@@ -1,0 +1,13 @@
+{% assign paths = page.url | split: '/' %}
+<header id="header">
+    <a href="/"><i class="fas fa-home"></i></a>
+    {% if paths.size == 0 %}
+        <span>Posts</span>
+    {% else %}
+        {% for item in paths %}
+            {% unless forloop.first %}
+                <span>{{ item | capitalize }}</span>
+            {% endunless %}
+        {% endfor %}
+    {% endif %}
+</header>

@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<section id="post-list">
+    {% for post in site.posts %}
+        {% include post-preview.html post=post  %}
+    {% endfor %}
+</section>

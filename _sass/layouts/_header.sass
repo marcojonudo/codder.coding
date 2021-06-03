@@ -1,0 +1,11 @@
+#header
+	display: flex
+	align-items: center
+	padding-left: $giant-gap
+	border-bottom: 1px solid $light-grey
+
+	> *:not(:first-child)
+
+		&::before
+			content: "›"
+			padding: 0 0.3rem

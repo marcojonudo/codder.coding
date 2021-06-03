@@ -1,0 +1,58 @@
+.category
+	width: 100%
+	padding: $small-gap 0
+
+	&-title
+		display: flex
+		align-items: center
+		font-size: 1.5em
+
+		&-meta-data
+			font-size: .7em
+			margin-left: $small-gap
+
+	&-post
+		display: flex
+		align-items: center
+		padding: $medium-gap 0 0 $medium-gap
+		transition: transform .2s
+
+		&:hover
+			transform: translateX(-$small-gap)
+
+		&-date
+			font-size: .8em
+			padding-left: $medium-gap
+
+	&:first-child
+		padding-top: $medium-gap
+
+	&-row
+		display: flex
+		padding: $small-gap 0
+
+		> i:first-child
+			margin-right: $small-gap
+
+	&-parent
+		font-size: $normal-font
+		display: flex
+		font-weight: 400
+
+	&-meta-data
+		@include flex-center
+		font-size: $small-font
+		padding-left: $small-gap
+
+	&-child
+		padding-left: $medium-gap
+
+	i
+		@include flex-center
+
+	a
+		font-size: $normal-font
+
+		&:hover
+			color: red
+

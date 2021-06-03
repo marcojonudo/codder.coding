@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="category">
+    <div class="category-title">
+        <span>{{ page.title }}</span>
+        <span class="category-title-meta-data">{{ page.posts | size }}</span>
+    </div>
+    <ul>
+        {% assign post_long_df = site.data.date_format.post.long | default: '%b %e, %Y' %}
+
+        {% for post in page.posts %}
+        <li class="category-post">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="category-post-date">{{ post.date | date: post_long_df }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
